@@ -11,13 +11,14 @@
 
 namespace Symfony\Component\Notifier\Bridge\Sms77\Tests;
 
+use PHPUnit\Framework\Attributes\Group;
+use PHPUnit\Framework\Attributes\IgnoreDeprecations;
 use Symfony\Component\Notifier\Bridge\Sms77\Sms77TransportFactory;
 use Symfony\Component\Notifier\Test\AbstractTransportFactoryTestCase;
 use Symfony\Component\Notifier\Test\IncompleteDsnTestTrait;
 
-/**
- * @group legacy
- */
+#[IgnoreDeprecations]
+#[Group('legacy')]
 final class Sms77TransportFactoryTest extends AbstractTransportFactoryTestCase
 {
     use IncompleteDsnTestTrait;
